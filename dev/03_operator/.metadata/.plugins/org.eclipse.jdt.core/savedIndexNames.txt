@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\gndnd\Documents\KH_Java\dev\03_operator\.metadata\.plugins\org.eclipse.jdt.core
+4273799094.index
+3271193799.index
