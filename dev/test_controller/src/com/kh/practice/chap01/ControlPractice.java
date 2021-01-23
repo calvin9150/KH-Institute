@@ -111,6 +111,100 @@ public class ControlPractice {
 	}
 	
 	public void practice6() {
+		System.out.print("권한을 확인하고자 하는 회원 등급 : ");
+		String user = sc.nextLine();
+		switch (user) {
+		case "관리자" :
+			System.out.println("회원관리, 게시글 관리, 게시글 작성, 게시글 조회, 댓글 작성");
+			break;
+		case "회원":
+			System.out.println("게시글 작성, 게시글 조회, 댓글 작성");
+			break;
+		case "비회원":
+			System.out.println("게시글 조회");
+			break;
+		default:
+			System.out.println("관리자, 회원, 비회원 중 하나를 입력하세요.");
+		}
+	}
+	
+	public void practice7() {
+		System.out.println("키(m)를 입력해 주세요");
+		double height = sc.nextDouble();
+		System.out.println("몸무게(kg)를 입력해 주세요");
+		int weight = sc.nextInt();
+		double BMI = weight/(height*height);
+		System.out.println("BMI 지수 : "+BMI);
+		if(BMI>=30) {
+			System.out.println("고도 비만");
+		} else if (BMI>=25&&BMI<=30) {
+			System.out.println("비만");
+		} else if (BMI>=23&&BMI<=25) {
+			System.out.println("과체중");
+		} else if (BMI>=18.5&&BMI<=23) {
+			System.out.println("정상체중");
+		} else {
+			System.out.println("저체중");
+		}
+	}
+	
+	public void practice8() {
+        System.out.print("피연산자1 입력 : ");
+        double x = sc.nextDouble();
+        System.out.print("피연산자2 입력 : ");
+        double y = sc.nextDouble();
+        System.out.print("연산자(+,-,*,/,%)를 입력 : ");
+        char operator = sc.next().charAt(0);
+        if(x>0&&y>0) {
+            System.out.print(x+""+operator+""+y+" = ");
+        switch(operator) {
+        	case '+' :
+        		System.out.println(x+y);
+        		break;
+        	case '-' :
+        	System.out.println(x-y);
+        		break;
+        	case '*' :
+        		System.out.println(x*y);
+        		break;
+        	case '/' :
+        		System.out.println(x/y);
+        		break;
+        	case '%' :
+        		System.out.println(x%y);
+        		break;
+        	default :
+        		System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+        	}
+        } else {
+        	System.out.println("양수를 입력해주세요.");
+        }
+	}
+	
+	public void practice9() {
+		System.out.print("중간 고사 점수 : ");
+		double mid = sc.nextDouble()*20/100;
+		System.out.print("기말 고사 점수 : ");
+		double fin = sc.nextDouble()*30/100;
+		System.out.print("과제 점수 : ");
+		double task = sc.nextDouble()*30/100;
+		System.out.print("출석 점수 : ");
+		int attend = sc.nextInt();
+		double total = mid+fin+task+attend;
 		
+		System.out.println("============결과============");
+		System.out.println("중간 고사 점수(20) : "+mid);
+		System.out.println("기말 고사 점수(30) : "+fin);
+		System.out.println("과제 점수(30) : "+task);
+		System.out.println("출석 점수(20) : "+attend*1f);
+		System.out.println("총점 : "+total);
+		
+		if(attend>14&&total>=60) {
+			System.out.println("Pass");
+		} else if(attend>14){
+			System.out.println("Fail [점수 미달]");
+		} else if(total>=60) {
+			System.out.println("[출석 회수 부족 ("+attend+"/20)]");
+		}
 	}
 }
