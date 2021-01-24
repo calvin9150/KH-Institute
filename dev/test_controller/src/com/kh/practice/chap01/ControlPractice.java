@@ -188,7 +188,7 @@ public class ControlPractice {
 		double fin = sc.nextDouble()*30/100;
 		System.out.print("과제 점수 : ");
 		double task = sc.nextDouble()*30/100;
-		System.out.print("출석 점수 : ");
+		System.out.print("출석 회수 : ");
 		int attend = sc.nextInt();
 		double total = mid+fin+task+attend;
 		
@@ -205,6 +205,42 @@ public class ControlPractice {
 			System.out.println("Fail [점수 미달]");
 		} else if(total>=60) {
 			System.out.println("[출석 회수 부족 ("+attend+"/20)]");
+		}
+	}
+	
+	public void practice10() {
+		System.out.println("실행할 기능을 선택하세요.");
+		System.out.println("1. 메뉴 출력"+"\n"+"2. 짝수/홀수"+"\n"+"3. 합격/불합격"+"\n"+"4. 계절"+"\n"+"5. 로그인"+"\n"+"6. 권한 확인"+"\n"+"7. BMI"+"\n"+"8. 계산기"+"\n"+"9. P/F");
+		int pick = sc.nextInt();
+		System.out.println("선택 : "+pick);
+		switch(pick) {
+		case 1:
+			practice1();
+			break;
+		case 2:
+			practice2();
+			break;
+		case 3:
+			practice3();
+			break;
+		case 4:
+			practice4();
+			break;
+		case 5:
+			practice5();
+			break;
+		case 6:
+			practice6();
+			break;
+		case 7:
+			practice7();
+			break;
+		case 8:
+			practice8();
+			break;
+		case 9:
+			practice9();
+			break;
 		}
 	}
 }
