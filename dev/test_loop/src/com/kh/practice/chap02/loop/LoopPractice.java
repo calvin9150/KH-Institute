@@ -143,4 +143,66 @@ public class LoopPractice {
 			}
 		} while(num>0);
 	}
+	
+	public void practice11() {
+		System.out.print("시작 숫자 : ");
+		int num = sc.nextInt();
+		System.out.print("공차 : ");
+		int commonDiff =  sc.nextInt();
+		int sum = num;
+		for (int i=1; i<=10; i++) {
+			sum+=commonDiff;
+			System.out.print(sum+" ");
+		}
+	}
+	
+	public void practice12() {
+		String order = "";
+		do {
+			System.out.print("연산자(+,-,*,/,%) : ");
+	        String operator = sc.nextLine();
+	        if(operator.equals("exit")) {
+	        	System.out.println("프로그램을 종료합니다.");
+	        	break;
+	        } else if(!operator.equals("+")&&!operator.equals("-")&&!operator.equals("/")&&!operator.equals("*")&&!operator.equals("%"))
+	        	{
+	        		System.out.println("없는 연산자입니다. 다시 입력해주세요.");
+	        		continue;
+	        	}
+			System.out.print("정수1 : ");
+			int x = sc.nextInt();
+			System.out.print("정수2 : ");
+			int y = sc.nextInt();
+			if(operator.equals("/")&&y==0) {
+				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+				sc.nextLine();
+				continue;
+			}
+			System.out.print(x+" "+operator+" "+y+" = ");
+			sc.nextLine();
+	        switch(operator) {
+		    	case "+" :
+		    		System.out.println(x+y);
+		    		break;
+		    	case "-" :
+		    	System.out.println(x-y);
+		    		break;
+		    	case "*" :
+		    		System.out.println(x*y);
+		    		break;
+		    	case "/" :
+		    		System.out.println(x/y);
+		    		break;
+		    	case "%" :
+		    		System.out.println(x%y);
+		    		break;
+		    	default :
+		    		System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+		    		order = "exit";
+		    		break;
+	        	}
+
+			}    
+			while(!order.equals("exit"));
+	}
 }
