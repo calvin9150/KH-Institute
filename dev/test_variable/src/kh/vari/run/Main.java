@@ -5,7 +5,7 @@ import kh.vari.function.VariExample;
 public class Main {
 
 	public static void main(String[] args) {
-		new VariExample().Example3_5();
+		new VariExample().Example3_size();
 	}
 
 }

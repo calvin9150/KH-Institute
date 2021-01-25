@@ -24,13 +24,76 @@ public class VariExample {
 	}
 	
 	public void Example3() {
+		System.out.print("입력 : ");
 		String getStr = sc.nextLine();
 		for(int i=0; i<getStr.length(); i++) {
 			System.out.println(getStr.charAt(i));
 		}
 	}
 	
-	public void Example3_5() {
+	public void Example3_minus() {
+		System.out.print("첫번째 입력 : ");
+		String getStr = sc.nextLine();
+		for(int i=0; i<getStr.length(); i++) {
+			System.out.println(getStr.charAt(i));
+		}
+		int str = Integer.parseInt(getStr);
+		System.out.print("두번째 입력 : ");
+		String getStr2 = sc.nextLine();
+		for(int i=0; i<getStr2.length(); i++) {
+			System.out.println(getStr2.charAt(i));
+		}
+		int str2 = Integer.parseInt(getStr2); 
+		System.out.println("첫번째 숫자"+" - "+"두번째 숫자 = "+(str-str2));
+	}
+	
+	public void Example3_division() {
+		System.out.print("첫번째 입력 : ");
+		String getStr = sc.nextLine();
+		for(int i=0; i<getStr.length(); i++) {
+			System.out.println(getStr.charAt(i));
+		}
+		double str = Double.parseDouble(getStr);
+		System.out.print("두번째 입력 : ");
+		String getStr2 = sc.nextLine();
+		for(int i=0; i<getStr2.length(); i++) {
+			System.out.println(getStr2.charAt(i));
+		}
+		double str2 = Double.parseDouble(getStr2); 
+		System.out.println("첫번째 숫자"+" / "+"두번째 숫자 = "+(str/str2));
+	}
+	
+	public void Example3_remainder() {
+		System.out.print("첫번째 입력 : ");
+		String getStr = sc.nextLine();
+		for(int i=0; i<getStr.length(); i++) {
+			System.out.println(getStr.charAt(i));
+		}
+		double str = Double.parseDouble(getStr);
+		System.out.print("두번째 입력 : ");
+		String getStr2 = sc.nextLine();
+		for(int i=0; i<getStr2.length(); i++) {
+			System.out.println(getStr2.charAt(i));
+		}
+		double str2 = Double.parseDouble(getStr2); 
+		System.out.println("첫번째 숫자와 두번째 숫자의 나머지 = "+(str%str2));
+	}
+	
+	public void Example3_size() {
+		System.out.print("입력 : ");
+		String getStr = sc.nextLine();
+		for(int i=0; i<getStr.length(); i++) {
+			System.out.println(getStr.charAt(i));
+		}
+		int num = Integer.parseInt(getStr);
+		if(num>=20) {
+			System.out.println("20이상입니다.");
+		} else {
+			System.out.println("20이하입니다.");
+		}
+	}
+	
+	public void Example3_upperOrLower() {
 		String getStr = sc.nextLine();
 		int upperCase = 0;
 		int lowerCase = 0;
@@ -48,7 +111,6 @@ public class VariExample {
 		} else {
 			System.out.println("대문자의 갯수 : "+upperCase+" 소문자의 갯수 : "+lowerCase);
 		}
-
 	}
 	
 }
