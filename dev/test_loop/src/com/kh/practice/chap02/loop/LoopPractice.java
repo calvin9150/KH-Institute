@@ -205,4 +205,32 @@ public class LoopPractice {
 			}    
 			while(!order.equals("exit"));
 	}
+	
+	public void practice13() {
+		System.out.print("정수 입력 : ");
+		int row = sc.nextInt();
+		for(int i=1; i<=row; i++) {
+			System.out.print("");
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+				if(j==i) {
+					System.out.println();
+				}
+			}
+		}
+	}
+	
+	public void practice14() {
+		System.out.print("정수 입력 : ");
+		int row = sc.nextInt();
+		for(int i=row; i>=1; i--) {
+			System.out.print("");
+			for(int j=i; j>=1; j--) {
+				System.out.print("*");
+				if(j<=1) {
+					System.out.println();
+				}
+			}
+		}
+	}
 }

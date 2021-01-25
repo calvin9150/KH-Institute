@@ -6,7 +6,7 @@ public class Run {
 
 	public static void main(String[] args) {
 		
-		new LoopPractice().practice12();
+		new LoopPractice().practice14();
 
 	}
 
