@@ -5,7 +5,7 @@ import com.kh.practice.chap01.ControlPractice;
 public class Run {
 
 	public static void main(String[] args) {
-		new ControlPractice().practice10();
+		new ControlPractice().practice11();
 
 	}
 

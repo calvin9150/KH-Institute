@@ -243,4 +243,33 @@ public class ControlPractice {
 			break;
 		}
 	}
+	
+	public void practice11() {
+		System.out.print("비밀번호 입력(1000~9999) : ");
+		String pw = sc.nextLine();
+		int pwInt = Integer.parseInt(pw);
+		char pwArr[] = new char[4];
+		if(pwInt<10000) {
+			for(int i=0; i<=3; i++) {
+				pwArr[i] = pw.charAt(i);
+			}
+			Loop1 :
+			for(int i=0; i<=3; i++) {
+				char temp = pwArr[i];
+				Loop2 :
+				for(int j=0; j<=3; j++) {
+					if(i != j&&pwArr[i]==pwArr[j]) {
+						System.out.println("중복 값 있음. ");
+						break Loop1;
+					}
+				}
+				if(i==3) {
+					System.out.println("생성 성공");
+				}
+			}
+			} else {
+				System.out.println("자리 수 안 맞음.");
+			}
+	}
+
 }
