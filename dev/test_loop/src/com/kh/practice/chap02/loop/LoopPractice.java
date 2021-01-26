@@ -93,22 +93,24 @@ public class LoopPractice {
 	public void practice7() {
 		int num1 = 0;
 		int num2 = 0;
-		do {
-			System.out.print("1이상의 숫자를 입력하세요 : ");
+		while(num1>=0&&num2>=0)
+		{
+			System.out.print("첫 번째 숫자 : ");
 			num1 = sc.nextInt();
-			System.out.print("1이상의 숫자를 입력하세요 : ");
+			System.out.print("두 번째 숫자 : ");
 			num2 = sc.nextInt();
 			if(num1>=1&&num2>=1&&num1>num2) {
 				for(int i=num2; i<=num1; i++) {
 					System.out.println(i);
+					}
+					} else if (num1>=1&&num2>=1&&num2>num1) {
+						for(int i=num1; i<=num2; i++) {
+							System.out.println(i);
+						}
+				} else {
+					System.out.println("1이상의 숫자를 입력하세요.");
 				}
-				} else if (num1>=1&&num2>=1&&num2>num1) {
-					for(int i=num1; i<=num2; i++) {
-						System.out.println(i);
-				}
-				System.out.println("1이상의 숫자를 입력하세요.");
 			}
-		} while(num1>=1&&num2>=1);
 	}
 	
 	public void practice8() {
