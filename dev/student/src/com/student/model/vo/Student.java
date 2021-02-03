@@ -12,16 +12,15 @@ public class Student {
 	private int coding;
 	
 	public Student() {}
-	
 	public Student(String name, int age, char gender, String address) {
 		//매개변수있는 생성자로 매개변수에 있는 값을 멤버변수에 대입하는 것.
 		this.name = name; //this는 이 객체를 가르킴.
 		this.age = age;
 		this.gender = gender;
 		this.address = address;
-		
 	}
 	
+
 	public void setName(String name) { //1교시 34분 참조
 		this.name = name;
 	}
@@ -58,7 +57,7 @@ public class Student {
 		this.kor = kor;
 	}
 	
-	public int kor( ) {
+	public int getKor() {
 		return kor;
 	}
 	

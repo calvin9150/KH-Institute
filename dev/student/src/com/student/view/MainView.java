@@ -17,6 +17,8 @@ public class MainView {
 				System.out.println("2. 학생등록");
 				System.out.println("3. 학생성별검색");
 				System.out.println("4. 학생정보수정");
+				System.out.println("5. 성적입력");
+				System.out.println("7. 성적출력");
 				System.out.println("0. 프로그램 종료");
 				System.out.print("선택 : ");
 				int cho = sc.nextInt();
@@ -28,6 +30,10 @@ public class MainView {
 					case 3 : stc.searchGender();
 					break;
 					case 4 : stc.updateStudent();
+					break;
+					case 5 : stc.inputScore();
+					break;
+					case 7 : stc.printGrade();
 					break;
 					case 0 : System.out.println("프로그램을 종료합니다.");
 					return;
@@ -50,6 +56,26 @@ public class MainView {
 			String address = sc.nextLine();
 			
 			Student s = new Student(name, age, gender, address);
+			
+			return s;
+		}
+		
+		public Student inputScore() {
+			Student s = new Student();
+			Scanner sc = new Scanner(System.in);
+			System.out.println("=== 성적 등록 ===");
+			System.out.print("국어 : ");
+			int kor = sc.nextInt();
+			s.setKor(kor);
+			System.out.print("영어 : ");
+			int eng = sc.nextInt();
+			s.setEng(eng);
+			System.out.print("수학 : ");
+			int math = sc.nextInt();
+			s.setMath(math);
+			System.out.print("코딩 : ");
+			int coding = sc.nextInt();
+			s.setCoding(coding);
 			
 			return s;
 		}
@@ -84,7 +110,6 @@ public class MainView {
 			s.setAddress(sc.nextLine());
 			
 			return s;
-			
 		}
 
 	}

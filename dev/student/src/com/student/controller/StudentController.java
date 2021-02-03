@@ -44,4 +44,20 @@ public class StudentController {
 		boolean flag = dao.updateStudent(s);
 		view.printMsg(flag?"수정성공":"수정실패");
 	}
+	
+	public void inputScore() {
+		Student s = view.inputScore();
+		boolean flag = dao.inputScore(s);
+		view.printMsg(flag?"입력성공":"입력실패");
+	}
+	
+	public void printGrade() {
+		//성적입력화면 출력
+		//1. 성적 저장된 dao의 멤버변수에서 데이터 가져와야 함.
+		//해당 멤버변수는 s1, s2, s3, s4, s5
+		//dao에서 관련 내용을 전달해주는 기능 구현하기
+		String d = dao.printGrade();
+		view.printMsg(d);
+	}
+
 }
