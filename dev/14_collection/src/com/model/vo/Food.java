@@ -1,8 +1,9 @@
 package com.model.vo;
 
 import java.util.Date;
+import java.util.Objects;
 
-public class Food {
+public class Food implements Comparable{
 
 	private String name;
 	private int price;
@@ -10,7 +11,9 @@ public class Food {
 	private int calorie;
 	private Date exp;
 	
-	public Food() {}
+	public Food() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Food(String name, int price, String category, int calorie, Date exp) {
 		super();
@@ -63,18 +66,48 @@ public class Food {
 
 	@Override
 	public String toString() {
-		return "Food [name=" + name + ", price=" + price + ", category=" 
-				+ category + ", calorie=" + calorie + ", exp="
+		return "Food [name=" + name + ", price=" + price + ", category=" + category + ", calorie=" + calorie + ", exp="
 				+ exp + "]";
 	}
 	
-	//객체의 동일성 비교를 위해 equals 오버라이딩 처리 필요
+	//객체의 동일성을 비교하기 위해 
+	//equals오버라이딩처리를 해야함.
+	//name, price, category 
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Food) {
+			Food f=(Food)o;
+			if(this.name.equals(f.name)
+					&&this.price==f.price
+					&&this.category.equals(f.category)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(name,price,category);
+	}
 	
-	
-//	@Override
-//	public int hashCode() {
-//		return Object.hash(name, price, category);
-//	}
+
+	@Override
+	public int compareTo(Object f) {
+		if(f instanceof Food) {
+			Food temp=(Food)f;
+			//return name.compareTo(temp.name);//오름차순으로 정렬
+			return price-temp.price;
+		}
+		return 0;
+	}
 	
 	
 }
+
+
+
+
+
+
+
+
