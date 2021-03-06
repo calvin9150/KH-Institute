@@ -8,16 +8,16 @@ public class Person implements Serializable{
 	private String name;
 	private int age;
 	private String gender;
-	private String shot;
+	private String vaccination;
 	
 	public Person() {}
 
-	public Person(String name, int age, String gender, String shot) {
+	public Person(String name, int age, String gender, String vaccination) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
-		this.shot = shot;
+		this.vaccination = vaccination;
 	}
 
 	public String getname() {
@@ -44,17 +44,17 @@ public class Person implements Serializable{
 		this.gender = gender;
 	}
 
-	public String getShot() {
-		return shot;
+	public String getvaccination() {
+		return vaccination;
 	}
 
-	public void setShot(String shot) {
-		this.shot = shot;
+	public void setvaccination(String vaccination) {
+		this.vaccination = vaccination;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + ", shot=" + shot + "]";
+		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + ", vaccination=" + vaccination + "]";
 	}
 	
 	

@@ -39,12 +39,12 @@ public class MainView {
 		String name = sc.next();
 		System.out.print("나이 : ");
 		int age = sc.nextInt();
-		System.out.print("성별 : ");
+		System.out.print("성별(남성/여성) : ");
 		sc.nextLine();
 		String gender = sc.nextLine();
-		System.out.print("접종 여부 : ");
-		String shot = sc.nextLine();
-		Person person = new Person(name, age, gender, shot);
+		System.out.print("접종 여부(접종/비접종) : ");
+		String vaccination = sc.nextLine();
+		Person person = new Person(name, age, gender, vaccination);
 		persons.add(person);
 		pc.fileSave(persons);
 		return person;
