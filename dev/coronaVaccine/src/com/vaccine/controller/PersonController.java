@@ -1,7 +1,5 @@
 package com.vaccine.controller;
 
-import java.io.DataInputStream;
-import java.io.FileNotFoundException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
@@ -34,6 +32,5 @@ public class PersonController {
 
 	public ObjectInputStream fileRead() throws Exception {
 		return dao.fileRead();
-		
 	}
 }

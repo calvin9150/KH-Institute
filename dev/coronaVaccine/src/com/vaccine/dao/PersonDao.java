@@ -7,6 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import com.vaccine.controller.PersonController;
 import com.vaccine.vo.Person;
 
 public class PersonDao {
@@ -34,10 +35,14 @@ public class PersonDao {
 		}
 	}
 
-	public ObjectInputStream fileRead() {
-		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))){
-			ois.readObject();
-		} catch(Exception e) {
+	public ObjectInputStream fileRead() throws ClassNotFoundException {
+		PersonController pc = new PersonController();
+		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))){	
+			persons = (ArrayList<Person>) ois.readObject();
+			for(int i=0; i<persons.size();i++) {
+				System.out.println(persons.get(i));
+			}
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;

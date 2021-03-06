@@ -25,7 +25,7 @@ public class MainView {
 			break;
 			case 2 : pc.insultPerson();
 			break;
-			case 3 : readFile();
+			case 3 : pc.fileRead();
 			break;
 			} 
 		} while(true);
@@ -49,7 +49,7 @@ public class MainView {
 		pc.fileSave(persons);
 		return person;
 	}
-	
+	/*
 	public void readFile() throws ClassNotFoundException {
 		PersonController pc = new PersonController();
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))){	
@@ -61,6 +61,7 @@ public class MainView {
 			e.printStackTrace();
 		}
 	}
+	*/
 	
 	public void printMsg(String msg) {
 		System.out.println("--- 시스템 메세지 ---");
