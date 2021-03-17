@@ -20,11 +20,11 @@ public class Person implements Serializable{
 		this.vaccination = vaccination;
 	}
 
-	public String getname() {
+	public String getName() {
 		return name;
 	}
 
-	public void setname(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -44,11 +44,11 @@ public class Person implements Serializable{
 		this.gender = gender;
 	}
 
-	public String getvaccination() {
+	public String getVaccination() {
 		return vaccination;
 	}
 
-	public void setvaccination(String vaccination) {
+	public void setVaccination(String vaccination) {
 		this.vaccination = vaccination;
 	}
 

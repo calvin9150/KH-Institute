@@ -15,23 +15,31 @@ public class MainView {
 	public void mainMenu() throws Exception {
 		Scanner sc = new Scanner(System.in);
 		PersonController pc = new PersonController();
+		
 		do {
 			System.out.println("===== 백신 접종 대상자 관리 프로그램 =====");
-			System.out.println("1. 대상자 전체 조회");
-			System.out.println("2. 신상 등록");
+			System.out.println("1. 신상 등록");
+			System.out.println("2. 신상 수정");
+			System.out.println("3. 전체 조회");
+			System.out.println("4. 우선 접종 대상자 조회");
 			int cho = sc.nextInt();
 			switch(cho) {
-			case 1 : pc.searchAll();
+			case 1 : pc.insultPerson();
 			break;
-			case 2 : pc.insultPerson();
+			case 2 : pc.updateCandidates();
 			break;
 			case 3 : pc.fileRead();
 			break;
+			case 4 : pc.searchCandidates();
 			} 
 		} while(true);
 	}
 	
-	public Person inputData() {
+	public Person inputData() throws ClassNotFoundException {
+			try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))){	
+				persons = (ArrayList<Person>) ois.readObject();
+			} catch (IOException e) {
+		} 
 		Scanner sc = new Scanner(System.in);
 		PersonController pc = new PersonController();
 		System.out.println("======= 신상등록 =======");
@@ -62,6 +70,12 @@ public class MainView {
 		}
 	}
 	*/
+	public String updateCandidates() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("수정 대상자의 이름을 입력하세요 : ");
+		String target = sc.nextLine();
+		return target;
+	}
 	
 	public void printMsg(String msg) {
 		System.out.println("--- 시스템 메세지 ---");
