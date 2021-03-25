@@ -9,8 +9,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+import static com.member.common.JDBCTemplate.close;
+import static com.member.common.JDBCTemplate.getConnection;
+
 
 public class JDBCTemplate {
+	
 	public static Connection getConnection() {
 		Connection conn=null;
 		try {
