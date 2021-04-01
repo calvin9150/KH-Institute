@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자활용2</title>
+  </head>
+  <body>
+    <h2>반응선택자</h2>
+    <pre>
+      client의 움직임에 따라 style적용.
+      active : 마우스를 지정한 태그(element)를 클릭했을 때 
+      hover : 엘리먼트에 마우스가 올라갔을 때
+    </pre>
+    <nav>
+      <p id="activeTest">active 클릭하는 동안</p>
+      <p id="hoverTest">hover 마우스 올리면</p>
+    </nav>
+    <style>
+      #activeTest:active {
+        font-size: 30px;
+        color: blue;
+        background-color: brown;
+      }
+      #hoverTest:hover {
+        font-size: 30px;
+        color: yellow;
+        background-color: skyblue;
+      }
+    </style>
+  </body>
+</html>
