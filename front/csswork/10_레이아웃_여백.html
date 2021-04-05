@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 여백</title>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>여백</h1>
+    <p>
+        padding : 태그내부에서 border와 content사이 간격을 설정하는 속성
+        margin : 태그와 태그, 태그 페이지 사이의 간격을 설정하는 속성
+    </p>
+    <h3>padding설정하기</h3>
+    <div class="parent">
+        <div class="container">기본</div>
+        <div class="container paddingAll">콘텐츠내용설정</div>
+        <div class="container paddingPosition">콘텐츠내용설정</div>
+        <div class="container paddingAll">
+            <img src="mac.png" alt="" width="50" height="50">
+        </div>
+        <div class="container paddingTest">콘텐츠내용설정</div>
+    </div>
+    <style>
+        *{
+            padding:0;
+        }
+        .parent{
+            display:flex;
+        }
+        .container{
+            border:1px green solid;
+            width:200px;
+            height:100px;
+        }
+        .paddingAll{
+            padding:10px;/*4면이 모두 적용이됨*/
+        }
+        .paddingPosition{
+            /* 여백을 줄 위치를 지정할 */
+            padding-left:20px;
+        }
+        .paddingTest{
+            padding:10px 0 0 20px;
+        }
+    </style>
+    
+    <h3>margin설정하기</h3>
+    <div class="container marginAll">div1</div>
+    <div class="container marginPosition">div2</div>
+    <div class="container marginTest">div3</div>
+    <div class="container">
+        <div class="innercontainer">inner div</div>
+    </div>
+    <style>
+        .innercontainer{
+            border:1px red solid;
+            width:100px;
+            height:100px;
+            margin-left:50px
+        }
+        .marginAll{
+            margin:20px;
+        }
+        .marginPosition{
+            margin-left:50px;
+        }
+        .marginTest{
+            margin:50px 0 0 100px;
+        }
+    </style>
+
+    <header>
+        <div>
+            <img src="http://image.kmib.co.kr/online_image/2015/0430/201504301343_61140009395729_1.jpg" alt="" width="100" height="100">
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>메인화면</li>
+                    <li>게시판</li>
+                    <li>갤러리</li>
+                    <li>자료실</li>
+                    <li>기타</li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td>
+                        <input type="text" name="userId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        패스워드
+                    </td>
+                    <td>
+                        <input type="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="로그인">
+                        <input type="reset" value="취소">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <style>
+        header{
+            display:flex;
+        }
+        /* header,header>div,ul{
+            border:1px red solid;
+        } */
+        header>div:first-child{
+            margin:20px;
+        }
+        header>div:first-child>img{
+            border-radius: 50px;
+            /* border:1px blue solid; */
+        }
+        div>table{
+            margin-top:40px;
+        }
+        div>table tr{
+            margin-bottom: 20px;
+        }
+        ul{
+            margin-top:50px;
+        }
+        ul>li:hover{
+            color:lime;
+            text-decoration: overline;
+        }
+        ul>li{
+            display:inline-block;
+            font-size:30px;
+            color:lightgreen;
+            margin-right:40px;
+            letter-spacing:10px;
+            font-weight:bolder;
+            font-family:"Single Day";
+            cursor:pointer;
+        }
+        header>div{
+            display:inline-block;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형적용하기</title>
+</head>
+<body>
+    <h1>변형이용하기</h1>
+    <p>
+        tranform속성을 이용해서 처리하기됨.
+        변형함수를 이용한다.
+    </p>
+    <h3>태그 특정지점으로 이동시키기</h3>
+    <p>
+        tranlate()함수를 이용함.
+    </p>
+    <img class="translate" src="http://image.newstomato.com/newsimg/2019/11/21/934965/attach.jpg" alt="">
+    <img class="transX" src="http://image.newstomato.com/newsimg/2019/11/21/934965/attach.jpg" alt="">
+    <img class="transY" src="http://image.newstomato.com/newsimg/2019/11/21/934965/attach.jpg" alt="">
+    <img class="transZ" src="http://image.newstomato.com/newsimg/2019/11/21/934965/attach.jpg" alt="">
+    <style>
+        .translate:active{
+            transform:translate(100px,200px);
+        }
+        .transX:active{
+            transform:translateX(200px);
+        }
+        .transY:active{
+            transform:translateY(200px);
+        }
+        .transZ:hover{
+            transform:perspective(200px) translateZ(100px);
+        }
+        img{
+            display: block;
+            width:200px;
+            height:200px;
+            margin-left:100px;
+        }
+    </style>
+    <h2>태그 확대하기</h2>
+    <p>
+        scale()함수 이용하기.
+        확대, 축소 비율을 인자로 넣음
+    </p>
+    <img class="scale" src="https://img.insight.co.kr/static/2017/11/25/700/c4r26nh276u996k64gy1.jpg" alt="">
+    <img class="scaleX" src="https://img.insight.co.kr/static/2017/11/25/700/c4r26nh276u996k64gy1.jpg" alt="">
+    <img class="scaleY" src="https://img.insight.co.kr/static/2017/11/25/700/c4r26nh276u996k64gy1.jpg" alt="">
+    <style>
+        .scale:hover{
+            transform:scale(1.5);
+        }
+        .scaleX:hover{
+            transform:scaleX(1.5);
+        }
+        .scaleY:hover{
+            transform:scaleY(1.5);
+        }
+
+    </style>
+
+
+    <h3>skew적용하기</h3>
+    <p>
+        각도대로 찌그려트리기
+    </p>
+    <img class="skew"src="http://www.ikoreanspirit.com/news/photo/201808/52375_62702_3226.jpg" alt="">
+    <img class="skewX"src="http://www.ikoreanspirit.com/news/photo/201808/52375_62702_3226.jpg" alt="">
+    <img class="skewY"src="http://www.ikoreanspirit.com/news/photo/201808/52375_62702_3226.jpg" alt="">
+    <style>
+        .skew:hover{
+            transform:skew(10deg, 30deg);
+        }
+        .skewX:hover{
+            transform:skewX(20deg);
+        }
+        .skewY:hover{
+            transform:skewY(30deg);
+        }
+    </style>
+
+    <h3>rotate</h3>
+    <p>
+        태그를 회전시키는것
+    </p>
+    <img class="rotate" src="https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg" alt="">
+    <img class="rotateX" src="https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg" alt="">
+    <img class="rotateY" src="https://cdn.dominos.co.kr/admin/upload/goods/20200311_x8StB1t3.jpg" alt="">
+    <style>
+        .rotate:hover{
+            transform:rotate(45deg);
+        }
+        .rotateX:hover{
+            transform:perspective(200px) rotateX(80deg);
+        }
+        .rotateY:hover{
+            transform:perspective(200px) rotateY(80deg);
+        }
+    </style>
+
+    <h3>트렌지션적용하기</h3>
+    <p>
+        태그가 변형속에 의해 변형이 될때 부드럽게이어지면서 변형될수있게 해주는 속성
+        transition-property : 적용할 속성(height, tranform)
+        transition-duration : 지속시간(s)
+        transition-titming-function:linear,ease, ease-in,ease-out
+        transition:위 속성을 한번에 설정하는 속성
+
+    </p> 
+    <div class="basic transi transi2">트렌지션적용하기</div>
+    <style>
+        .basic{
+            width:100px;
+            height:100px;
+            border:1px solid red;
+            background-color:khaki;
+            transition-property:width,transform,background-color;
+            transition-timing-function: ease;
+            transition-duration:1.5s;
+        }
+        .transi:hover{
+            width:800px;
+            background-color:lime;
+        }
+        .transi2:active{
+            transform:translate(200px, 300px);
+        }
+    </style>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

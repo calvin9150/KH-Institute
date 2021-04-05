@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 속성</title>
+    <style>
+        table{
+            width:300px;
+            height:300px;   
+            caption-side:bottom;
+            border:1px dotted black;
+            border-collapse:separate;
+            border-spacing:10px;
+            empty-cells:hide;
+            table-layout:fixed;
+        }
+        table td{
+            border:1px dashed black;
+            word-break:break-all;
+            text-align:center;
+            vertical-align:top;
+        }
+        /* 
+            테이블에 테두리를 표시할때 
+            border속성은 table, td에 각각 줘야함.
+        */
+
+    </style>
+</head>
+<body>
+    <h1>테이블속성 활용하기</h1> 
+    <table>
+        <caption>테스트자료입니다</caption>
+        <tr>
+            <td>1</td><!-- dkssudgktpdy -->
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>asdfasdflkajsvopiwerfjasdkjlasdfj;asdjfks</td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

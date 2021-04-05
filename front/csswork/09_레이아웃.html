@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃스타일</title>
+</head>
+<body>
+    <h2>태그에 대한 영역크기 설정</h2>
+    <p>
+        width / height
+        3구역으로 분할(border,padding,content)
+        * 기본적으로 크기영역 content영역만 해당
+        크기설정은 절대값, 상대값으로 설정
+        단위 : px(절대값) / %(상대값)
+    </p>
+    <h3>절대크기</h3>
+    <div class="container asize"></div>
+    <h3>상대크기</h3>
+    <div class="container rsize"></div>
+    <style>
+        .container{
+            border:1px red solid;
+        }
+        .asize{
+            width:900px;
+            height:200px;
+        }
+        .rsize{
+            width:70%;
+            height:200px;
+        }
+    </style>
+    <h2>태그별 배치속성</h2>
+    <p>
+        태그별로 block속성과 inline속성으로 구분할 수 있음.
+        block : 한 라인 전체를 차지함 -> 개행이 됨. width heigth 조정가능
+        inline : 라인에서 여러 태그를 표현가능 -> 개행되지않음 width height조정 불가능 크기는 라인에서 지정하는대로 처리함.
+        기본 태그의 배치속성을 변경할 수 있음 -> display속성을 이용
+    </p>
+    <h2>div(block)속성 배치</h2>
+    <div class="container basicsize">기본1</div>
+    <div class="container basicsize">기본2</div>
+    <div class="container basicsize">기본3</div>
+    <h2>div속성을 inline속성으로 변경하기</h2>
+    <div class="container basicsize inline">inline &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;div1</div>
+    <div class="container basicsize inline">inline div2</div>
+    <div class="container basicsize inline">inline div3</div>
+    <h2>div속성을 inline-block속성으로 변경하기</h2>
+    <div class="container basicsize inlineblock">inlineblock div1</div>
+    <div class="container basicsize inlineblock">inlineblock div1</div>
+    <div class="container basicsize inlineblock">inlineblock div1</div>
+    <style>
+        .inlineblock{
+            display:inline-block;
+        }
+        .inline{
+            display:inline;
+        }
+        .basicsize{
+            width:200px;
+            height:200px;
+        }
+    </style>
+
+    <h2>기본span(inline)을 배치하기</h2>
+    <span class="container">span1</span>
+    <span class="container">span2</span>
+    <span class="container">span3</span>
+    <h2>span에 block속성 변경하기</h2>
+    <span class="container basicsize block">block span1</span>
+    <span class="container basicsize block">block span2</span>
+    <span class="container basicsize block">block span3</span>
+    <h3>span에 inlineblock속성변경하기</h3>
+    <span class="container basicsize inlineblock">inlineblock span1</span>
+    <span class="container basicsize inlineblock">inlineblock span1</span>
+    <span class="container basicsize inlineblock">inlineblock span1</span>
+    <style>
+        .block{
+            display:block;
+        }
+    </style>
+    <lable class="block">아이디 <input type="text" name="userId"></lable>
+    패드워드 <input class="block" type="password" name="password">
+    <h3 class="inline">이름</h3> <input type="text" name="userName">
+
+    <h3>메뉴만들기</h3>
+    <nav>
+        <ul>
+            <li>게시판</li>
+            <li>갤러리</li>
+            <li>자료실</li>
+        </ul>
+    </nav>
+    <style>
+        ul>li{
+            display:inline-block;
+            margin-right:30px;
+        }
+    </style>
+
+    <h3>display:none</h3>
+    <p>
+        태그를 페이지에 출력하지 않게 하는 속성
+        코드상에서는 태그가 있지만 실제페이지에서는 출력되지 않게 하는것
+        코드가 있는 영역을 차지않는다.
+    </p>
+    <div id="target" class="container basicsize">div1</div>
+    <div class="container basicsize none">div2</div>
+    <div class="container basicsize">div3</div>
+    <style>
+        .none{
+            display:none;
+        }
+        /* #target:hover+div{
+            display:block;
+            background-color:lime;
+        } */
+    </style>
+    <script>
+        let t=document.getElementById("target");
+        t.addEventListener("click",(e)=>{
+            e.target.nextElementSibling.style.display="block";
+        })
+    </script>
+
+
+    </body>
+</html>

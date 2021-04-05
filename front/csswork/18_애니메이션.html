@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션적용하기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <style>
+        @keyframes ani{
+            from{
+                /* 스타일지정하기 */
+                background-color:orange;
+                font-size:20px;
+                transform: rotate(360deg);
+            }to{
+                background-color:violet;
+                border-radius: 100px;
+                font-size:50px;
+                /* transform:translate(200px,300px); */
+            }
+        }
+        @keyframes ani2{
+            0%{
+                width:100px;
+                height:100px;
+                background-color:aqua;
+                transform: perspective(200px) rotate(80deg);
+            }
+            20%{
+                background-color:tomato;
+                width:500px;
+                height:500px;
+            }
+            40%{
+                transform: scale(2);
+                border-radius: 200px;
+            }
+            60%{
+                width:100px;
+                height:100px;
+                transform: skew(45deg,70deg);
+            }100%{
+                background-color: magenta;
+                width:300px;
+                height:300px;
+                transform:translate(100px,100px);
+            }
+        }
+        .anitest{
+            animation-name:ani;
+            animation-duration:5s;
+            animation-direction:alternate;
+            animation-iteration-count:infinite;
+        }
+        .anitest2{
+            animation-name:ani2;
+            animation-duration:5s;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>애니메이션적용하기</h1>
+    <div >기본애니메이션적용</div>
+    <div >부분별 애니메이션</div>
+
+    
+    <header>
+        <nav>
+            <ul>
+                <li><img src="https://file.namu.moe/file/43775ab6d620d495e5f1c1a6f07141f83eb4cf0d8ba3999f2752bdabc50185e2" alt="" width="80px" height="80px"></li>
+                <li>메인화면</li>
+                <li>게시판</li>
+                <li>갤러리</li>
+                <li>자료실</li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        header{
+            width:100%;
+        }
+        header>nav>ul{
+            background-color:black;
+            height:80px;
+            display: flex;
+            justify-content: space-around;
+        }
+        header>nav>ul>li{
+            display: inline-block;
+            font-family: "Black And White Picture";
+            font-weight:bolder;
+            margin-right:50px;
+            color:red;
+            cursor:pointer;
+            font-size:50px;
+            letter-spacing: 10px;
+            margin-top:10px;
+        }
+        header>nav>ul>li:hover{
+            animation:menumove 0.5s infinite alternate;
+        }
+        @keyframes menumove {
+            from{
+                transform: translate(3px);
+                color:crimson;
+                text-decoration:line-through;
+                font-size:60px;
+            }to{
+                transform: translate(-3px);
+                color:rgb(255,42,42);
+                text-decoration: line-through;
+                font-size:60px;
+            }
+        }
+
+
+    </style>
+
+
+</body>
+</html>

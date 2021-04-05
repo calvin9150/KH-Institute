@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문단스타일</title>
+</head>
+<body>
+    <h2>문단정렬하기</h2>
+    <p>
+        text-align: left|right|center|justify;
+    </p>
+    <div class="container left" >
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다
+        ​</div>
+    <div class="container right">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다
+        ​</div>
+    <div class="container center">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​
+    </div>
+    <div class="container justify">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​
+    </div>
+    <div class="container textintent">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​
+    </div>
+    <div class="container lineheight">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​
+    </div>
+    <div>
+        <p class="lineheight">안녕하세요</p>
+        <p class="lineheight">안녕하세요</p>
+    </div>
+    <div class="container nowrap textoverflow">
+        너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이 말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나 너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​ 너무 진하지 않은 향기를 담고 진한 갈색 탁자에 다소곳이말을 건네기도 어색하게 너는 너무도 조용히 지키고 있구나너를 만지면 손 끝이 따뜻해 온 몸에 너의 열기가   퍼진다​
+    </div>
+    <style>
+        .nowrap{
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .textoverflow{
+            /* text-overflow: ellipsis; */
+            text-overflow: clip;
+        }
+        .lineheight{
+            line-height:40px;
+        }
+        .textintent{
+            text-indent: 30px;
+        }
+        .container{
+            width:300px;
+            height:200px;
+            border:1px yellow solid;
+            overflow: hidden;
+        }
+        .left{
+            text-align: left;
+        }
+        .right{
+            text-align:right;
+        }
+        .center{
+            text-align:center;
+        }
+        .justify{
+            text-align:justify;
+        }
+    </style>
+
+
+    
+</body>
+</html>

@@ -1,33 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자활용2</title>
-  </head>
-  <body>
+</head>
+<body>
+    <h5>이건안돼??</h5>
     <h2>반응선택자</h2>
-    <pre>
-      client의 움직임에 따라 style적용.
-      active : 마우스를 지정한 태그(element)를 클릭했을 때 
-      hover : 엘리먼트에 마우스가 올라갔을 때
-    </pre>
+    <p>
+        client의 움직임에 따라서 style이 적용되는것
+        클릭, 마우스가 지정한 태그에 올라갔을때.
+        active : 마우스로 지정한 태그(element)에 클릭했을때 
+        hover : 지정한 태그(element)에 마우스(포인트)가 올라갔을때
+    </p>
     <nav>
-      <p id="activeTest">active 클릭하는 동안</p>
-      <p id="hoverTest">hover 마우스 올리면</p>
+        <p id="activeTest">클릭하면 변해라!</p>
+        <p class="hoverTest">마우스올라가면 변해라!</p>
     </nav>
     <style>
-      #activeTest:active {
-        font-size: 30px;
-        color: blue;
-        background-color: brown;
-      }
-      #hoverTest:hover {
-        font-size: 30px;
-        color: yellow;
-        background-color: skyblue;
-      }
+        .hoverTest:hover{
+            color:lime;
+            background-color:red;
+        }
+        #activeTest:active{
+            font-size:30px;
+            color:hotpink;
+            background-color:brown;
+        }
     </style>
-  </body>
+
+    <h2>반응선택자로 메뉴구성하기</h2>
+    <nav>
+        <ul>
+            <li>메인메뉴</li>
+            <li>게시판</li>
+            <nav>
+                <ul>
+                    <li>자유게시판</li>
+                    <li>모임게시판</li>
+                </ul>
+            </nav>
+        </ul>
+    </nav>
+    <style>
+        li+nav>ul{
+            height:0px;
+            overflow:hidden;
+        }
+        li:active+nav>ul{
+            height:100px;
+        }
+        nav>ul>li{
+            display:inline-block;
+            margin-right:20px;
+            font-size:30px;
+            color:white;
+        }
+        nav>ul{
+            background-color:lightgreen;
+        }
+    </style>
+
+    <h3>문자선택자</h3>
+    <ul>
+        <li>::firtst-letter : 첫번째 한글자만 style적용하는 것</li>
+        <li>::first-line : 첫번재 줄에 style적용하는 것</li>
+        <li>::after : 태그의 끝에 문자를 추가</li>
+        <li>::before : 태그의 시작에 문자를 추가</li>
+        <li>::selection : 마우스가 드래그한 문자에 style적용</li>
+    </ul>
+    <div class="tt">
+        <p>
+            나의 이름은 유병승입니다. 사는곳은 경기도 시흥시<br>
+            나의 나이는 19살이구용 취미는 코딩입니다.
+        </p>
+        <p>
+            저는 유지훈입니다. 사는곳은 상봉이구요 상봉해요.<br>
+            나이는 39살이구용 취미는 상봉입니다.
+        </p>
+    </div>
+    <style>
+        div.tt>p::first-letter{
+            font-size:30px;
+            color:magenta;
+        }
+        div.tt>p::first-line{
+            background-color:aqua;
+            color:white;
+        }
+        div.tt>p::after{
+            content:"-bs-";
+        }
+        div.tt>p::before{
+            content:"-jh-";
+            color:lightskyblue;
+            background-color:maroon;
+        }
+        div.tt>p::selection{
+            background-color:orange;
+            color:orangered;
+        }
+    </style>
+
+    <h3>구조선택자</h3>
+    <p>
+        선택자:first-child : 구조상 첫번째 자식인 선택자태그
+        선택자:last-child : 구조상 마지막 자식인 선택자 태그
+        선택자:nth-child : 구조상 n번째 자식인 선택자 태그
+    </p>
+
+    <div>
+        <p>이젠 내가 첫번째 자식!</p>
+        <h5>h5 1</h5>
+        <h5>h5 2</h5>
+        <h5>h5 3</h5>
+        <h5>h5 4</h5>
+        <h5>h5 5</h5>
+        <div>
+            <h5>div>h5 1</h5>
+            <h5>div>h5 2</h5>
+            <h5>div>h5 3</h5>
+            <ul>
+                <li>
+                    <h5>1</h5>
+                </li>
+                <li>
+                    <h5>2</h5>
+                </li>
+                <li>
+                    <h5>3</h5>
+                </li>
+                <li>
+                    <h5>4</h5>
+                </li>
+            </ul>
+        </div>
+        <h5>내가이제 마지막</h5>
+    </div>
+    <style>
+        h5:first-child{
+            background-color:palegreen;
+        }
+        h5:last-child{
+            color:gold;
+        }
+        h5:nth-child(2n){
+            background-color:blue;
+        }
+    </style>
+
+    <h3>태그별 구조선택자</h3>
+    <p>
+        :first-of-type : 선택자태그 중 첫번째
+        :last-of-type : 선택자태그 중 마지막
+        :nth-of-type : 선택자태그 중 n번째
+    </p>
+
+    <style>
+        /* h5:first-of-type{
+            background-color:darkmagenta;
+        }
+        h5:last-of-type{
+            font-size:40px;
+        } */
+        h5:nth-of-type(2n){
+            text-decoration: overline;
+        }
+    </style>
+
+
+    <h4>부정선택자</h4>
+    <p>
+        선택자A:not(선택자B) -> 선택자A들 중 선택자B빼고
+    </p>
+
+    <div id="notTest">
+        <P>1</P>
+        <div>div1</div>
+        <P>2</P>
+        <P>3</P>
+        <div>div2</div>
+        <P>4</P>
+        <div>div3</div>
+        <P>5</P>
+        <div>
+            <p>6</p>
+            <h4>h4</h4>
+            <p>7</p>
+            <h3>h3</h3>
+            <p>8</p>
+            <h2>h2</h2>
+            <p>9</p>
+        </div>
+    </div>
+    <style>
+        div#notTest *:not(p){
+            background-color:orangered;
+        }
+    </style>
+
+    <h2>여러선택자 사용하기</h2>
+    <div>
+        <input type="text" name="userId">
+        <p>test</p>
+    </div>
+    <style>
+        input[type="text"],div>p{
+            background-color:lightsalmon;
+            border:4px yellow solid;
+        }
+    </style>
+
+</body>
 </html>
+
+
