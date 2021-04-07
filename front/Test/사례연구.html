@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 회원가입</title>
+
+    <style>
+      body {
+        background-color: rgb(238, 238, 238);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      li {
+        list-style: none;
+        text-align: left;
+      }
+
+      #id, #pw, #pw2 {
+        color: rgb(197, 197, 197);
+        text-align: right;
+      }
+      button {
+          font-size:20px; 
+          padding:10px 170px;
+          background-color: green;
+          color: white;
+          }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh54KRiNPgBdtr6sVizMyLGEyHVsa9P-8A2w&usqp=CAU"
+        />
+      </a>
+    </div>
+    <div>
+      <h5><label for="id">아이디</label></h5>
+      <input
+        type="text"
+        name="id"
+        id="id"
+        size="55"
+        maxlength="20"
+        placeholder="@naver.com"
+      />
+      <h5><label for="pw">비밀번호</h5></label>
+      <input
+        type="password"
+        name="pw"
+        id="pw"
+        size="55"
+        maxlength="20"
+        placeholder="🔒"
+      />
+      <h5>비밀번호 재확인</h5>
+      <input
+        type="password"
+        name="pw2"
+        id="pw2"
+        size="55"
+        maxlength="20"
+        placeholder="🔒"
+      />
+      <h5>이름</h5>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        size="55"
+        maxlength="20"
+        placeholder=""
+      />
+      <h5>생년월일</h5>
+      <input
+        type="text"
+        name="birth"
+        id="birth"
+        size="15"
+        maxlength="4"
+        placeholder="년(4자)"
+      />
+      <select style="width: 130px;"
+      type="text"
+      name="birth2"
+      id="birth2"
+     >
+        <option>월</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+        <input
+        type="text"
+        name="birth3"
+        id="birth3"
+        size="15"
+        maxlength="2"
+        placeholder="일"
+      />
+      <h5>성별</h5>
+      <div>
+        <select  style="width:420px;">
+            <option>성별</option>
+            <option>남자</option>
+            <option>여자</option>
+        </select>
+      </div>
+      <h5>본인 확인 이메일</h5>
+      <input
+        type="text"
+        name="mail"
+        id="mail"
+        size="55"
+        maxlength="20"
+        placeholder="선택입력"
+      />
+      <h5>휴대전화</h5>
+      <div>
+      <select  style="width:420px;">
+          <option>대한민국 +82</option>
+          <option>가나 +233</option>
+          <option>마카오 +853</option>
+      </select>
+    </div>
+    <div>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        size="55"
+        maxlength="20"
+        placeholder="전화번호 입력"
+      />
+    </div>
+    <button>가입하기</button>
+    </div>
+  </body>
+</html>
