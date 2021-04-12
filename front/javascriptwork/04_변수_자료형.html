@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수이용하기</title>
+</head>
+<body>
+    <h1>변수선언</h1>
+    <p>
+        변수를 선언하는 방법
+        var예약어를 이용해서 선언을 함.<br>
+        var 변수명; *자료형을 선언하지 않음!</br>
+        그러면 자바스크립트에 자료형이 없나요? -> 아니요 있어요
+        변수를 선언할때 사용하지 않을뿐이에요.!<br>
+        변수의 자료형이 결정되는 순간은 변수에 값이 대입됐을때
+        대입되는 값의 자료형을 가지고 결정<br>
+        var 변수명; *자료형이 정해지지 않은 상태 undefined
+        변수명=10; -> 이순간 변수명 변수의 자료형이 number로 결정이됨.<br>
+    </p>
+    <div>
+        <h2>변수의 자료형별 리터럴</h2>
+        <ul>
+            <li>문자열(String) : " "||' ' </li>
+            <li>숫자(Number) : 10||180.5</li>
+            <li>배열(Array) : []||new Array();</li>
+            <li>객체(Object) : {}||new Object();</li>
+            <li>undefined : undefined</li>
+            <li>함수(function) : function(){}||()=>{}</li>
+        </ul>
+    </div>
+
+    <script>
+        var happy;//변수선언
+        console.log(happy);
+        //변수의 자료형이 변경되는 순간 값이 대입되는 순간
+        var userName;
+        console.log(userName, typeof(userName));
+        userName="유지훈";//이순간 userName변수의 자료형은 String으로 결정됨.
+        //변수의 type을 확인하려면 typeof함수를 이용
+        console.log(userName,typeof(userName));
+        var age=19;
+        console.log(age,typeof(age));
+        var arr=[];
+        console.log(arr,typeof(arr));
+        var obj={};
+        console.log(obj,typeof(obj));
+        var func=function(){ alert('함수가 변수에 들어가다니?')};
+        console.log(func,typeof(func));
+        //자바스크립트변수는 유동적으로 자료형이 변경될 수 있다.
+        happy=userName;//어랏... 들어간다..ㅠㅠ ^^;;;
+        console.log(happy,typeof(happy));
+        happy=age;
+        console.log(happy,typeof(happy));
+        // if(typeof(happy)=="undefined"){
+
+        // }
+        console.log(typeof(jihoon));
+    </script>
+    <h2>변수의 활용범위</h2>
+    <p>
+        변수를 접근할 수 있는 범위에 따라 영역(scope)을 구분
+        
+        global scope : 페이지내에서 접근이 가능한 변수  -> window객체의 
+        멤버변수로 된 변수
+        
+        local scope : 특정 함수호출시에만 접근이 가능한 변수 -> 함수내부에서 선언된 변수
+
+        * { }에 따른 범위는 없다! -> es6 보완! const, let 추가
+    </p>
+    <script>
+        var ace="과자";//-> global scope영역의 변수
+        console.log(window);
+        console.log(userName);
+        userName="김기영B반";
+        console.log(userName);
+        //local scope -> 함수안에 선언된것은 함수가 실행됐을때만 이용이 가능한것
+        function scopeTest(){
+            var localVal="곧 쉬는시간";
+            console.log(localVal);
+        }
+        scopeTest();
+        console.log(localVal);
+    </script>
+    <h3>자바스크립트는 블록범위{내의 영역}를 허용하지 않음</h3>
+    <script>
+        //if문{ } for문내{ }
+        if(age==19){
+            var angel="김기영 B오전반";//global scope으로 지정됨.
+            console.log(angel);
+        }
+        angel="유병승";
+        console.log(angel);
+
+        for(var i=0;i<10;i++){
+            console.log(i);
+        }
+        console.log("외부",i);
+    </script>
+    <h3>변수명을 중복을 선언할 수 있음</h3>
+    <p>
+        변수명을 페이지에서 중복해서 선언한다고 에러를 발생하지 않음
+        있는 변수에 예고없이 덮어쓰기해버림.........ㅠㅠ
+    </p>
+    <script>
+        var userName="이건 내가쓸 변수!";
+        console.log(userName);
+        var func=function(){};
+    </script>
+
+    <h3>es6에서 보완한 변수 선언 예약어</h3>
+    <p>
+        let : 변경이 가능한 변수를 선언할때 쓰는 예약어(변경되는 데이터)
+        const : 변경이 불가능한 변수를 선언할때 쓰는 예약어(함수저장, 고정값)
+        1. 블록범위를 허용함 
+        2. 중복명칭이 있는지 확인
+    </p>
+    <script>
+        if(age==19){
+            //let msg="이건 접근못해!";
+            const msg="이건접근못해";
+            const el=document.querySelector("p");
+            el.style.backgroundColor="yellow";
+            //el="";
+            console.log(msg);
+            msg="호호호호";
+            console.log(msg);
+        }
+        console.log(msg);
+      
+    </script>
+    <script>
+        for(let j=0;j<10;j++){
+            console.log(j);
+        }
+        //console.log(j);
+        //변수의 중복선언을 방지해줌
+        let test="유병승";
+        //let test;
+        let name="adf";
+        if(age==19){
+            let test;
+            console.log(test);
+            console.log(name);
+        }
+    </script>
+
+
+</body>
+</html>
