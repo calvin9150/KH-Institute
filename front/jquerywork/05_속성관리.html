@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성관리하기</title>
+</head>
+<body>
+    <h1>태그에있는 속성관리</h1>
+    <p>
+        attr()함수를 이용해서 속성을 추가하거나 확인할 수 있다.
+    </p>
+    <ul>
+        <li>attr("속성명") : 태그속성에 있는 값을 확인</li>
+        <li>attr("속성명","속성값") : 태그속성에 값넣기</li>
+        <li>attr("속성명",function(i,v){}) : 태그속성에 함수에서 반환되는값넣기</li>
+        <li>attr({속성명:속성값,속성명:속성값}):객체에 선언된 속성을 일괄로 적용하는것</li>
+    </ul>
+    <button onclick="sizeChange();">크기 변경</button>
+    <button onclick="funcParam();">callback함수이용변경</button>
+    <button onclick="objParam();">객체이용변경</button>
+    <button onclick="removeTest();">속성삭제</button>
+    <br>
+    <div id="container">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+        <img src="yukika.jpg" alt="" width="100px" height="100px">
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        const removeTest=()=>{
+            $("#container>img:even").removeAttr("src");
+            $("#container>img:even").removeAttr("width");
+            $("#container>img:even").removeAttr("height");
+        }
+        const objParam=()=>{
+            $("#container>img").first().attr({
+                "src":"https://item.kakaocdn.net/do/30cef086c8778d80e1487385bd5efe7b8f324a0b9c48f77dbce3a43bd11ce785",
+                "width":"500px",
+                "height":"500px"
+            });
+        }
+        const funcParam=()=>{
+            $("#container>img").attr("src",(i,v)=>{
+                console.log(i,v);
+                let src="";
+                switch(i%3){
+                    case 0 : src="https://item.kakaocdn.net/do/30cef086c8778d80e1487385bd5efe7b8f324a0b9c48f77dbce3a43bd11ce785"; break;
+                    case 1 : src="https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg"; break;
+                    case 2 : src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg";break;
+                }
+                return src;
+            })
+        }
+        const sizeChange=()=>{
+            console.log($("#container>img").attr("width"));
+            console.log($("#container>img").attr("height"));
+            let size=parseInt($("#container>img").attr("height"));
+            console.log(size);
+            $("#container>img").attr("width",size+100);
+            $("#container>img").attr("height",size+100);
+            // $("#container>img").attr("width",Math.random()*600+100);
+            // $("#container>img").attr("height",Math.random()*600+100);
+            //이전크기에서 100px만큼씩 커지게 만들기
+
+        }
+    </script>
+
+
+</body>
+</html>
