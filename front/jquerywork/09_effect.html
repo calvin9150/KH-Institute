@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effect</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>animate함수 이용하기</h1>
+    <p>jquery함수를 이용해서 간단하게 animation적용하는것</p>
+    <div id="target"></div>
+    <script>
+        $("#target").click((e)=>{
+            $(e.target).animate({
+                left:"200px","height":"300px","width":"300px","opacity":"0.1"
+            },3000,()=>{
+                e.target.innerHTML="애니메이션끝!!!";
+            });
+        })
+    </script>
+    <style>
+        #target{
+            width:100px;
+            height:100px;
+            background-color:lightpink;
+            /* position:absolute; */
+        }
+    </style>
+
+
+    <h2>show / hide</h2>
+    <p>
+        특정태그를 보이게/안보이게 하는 함수
+    </p>
+    <button id="showTest">show</button>
+    <button id="hideTest">hide</button>
+    <button id="toggleTest">toggle</button><br><br>
+    <img src="yukika.jpg" alt="" width="200" height="200">
+
+    <script>
+        $("#showTest").click((e)=>{
+            $(e.target).nextAll("img").show(1000);
+        });
+        $("#hideTest").click((e)=>{
+            $(e.target).nextAll("img").hide(1000);
+        });
+        $("#toggleTest").click((e)=>{
+            $(e.target).nextAll("img").toggle(1000);
+        });
+    </script>
+
+    <h3>슬라이딩이용하기</h3>
+    <button id="slideUpTest">slideUp</button>
+    <button id="slideDownTest">slideDown</button>
+    <button id="slideToggleTest">slideToggle</button>
+    <div class="a"></div>
+    <br>
+    <br>
+    <br>
+    <script>
+        $("#slideUpTest").click((e)=>{
+            $(".a").slideUp(1000);
+        });
+        $("#slideDownTest").click((e)=>{
+            $(".a").slideDown(1000);
+        });
+        $("#slideToggleTest").click((e)=>{
+            $(".a").slideToggle(2000);
+        });
+    </script>
+    <style>
+        .a{
+            width:300px;
+            height:30px;
+            border:1px dotted lime;
+            background-color:lightcoral;
+        }
+    </style>
+
+    <h2>슬라이드구현하기</h2>
+    <div>첫번째 질문</div>
+    <p class="contents">내용1</p>
+    <div>두번째 질문</div>
+    <p class="contents">내용2</p>
+    <div>세번째 질문</div>
+    <p class="contents">내용3</p>
+    <div>네번째 질문</div>
+    <p class="contents">내용4</p>
+    <div>다섯번째 질문</div>
+    <p class="contents">내용5</p>
+    <script>
+        $(".contents").prev().click((e)=>{
+            $(e.target).next().slideToggle(1000);
+            $(".contents").not($(e.target).next()).css("display","none");
+        })
+    </script>
+    <style>
+        div{
+            width:300px;
+            height:30px;
+            background-color:lightcoral;
+            color:white;
+            border:1px solid yellow;
+        }
+        div+p{
+            margin:0;
+            padding:0;
+            display: none;
+            width:300px;
+            height:80px;
+            border:3px dashed lime;
+            background-color:lightgreen;
+        }
+    </style>
+
+    <h3>fade</h3>
+    <p>
+        태그를 점점희미하게 사라지게하는 함수(fadeOut)
+        점점 진하게 나타나게 하는 함수(fadeIn)
+        태그를 특정지점까지 희미하게 하는 함수(fadeTo)
+    </p>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="toggleF">toggle</button>
+    <br>
+    <img src="yukika.jpg" alt="" width="200" height="200">
+    <br><br><br><br><br><br>
+    <style>
+        #toggleF+br+img{
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+        $("#toggleF").next().next().hover((e)=>{
+            $(e.target).fadeTo(1000,1);
+        },(e)=>{
+            $(e.target).fadeTo(1000,0.3);
+        });
+        $("#fadein").click((e)=>{
+            $(e.target).nextAll("img").fadeIn(2000);
+        });
+        $("#fadeout").click((e)=>{
+            $(e.target).nextAll("img").fadeOut(2000);
+        });
+        $("#toggleF").click((e)=>{
+            $(e.target).nextAll("img").fadeToggle(2000);
+        })
+    </script>
+</body>
+</html>
