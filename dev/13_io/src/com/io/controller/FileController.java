@@ -5,6 +5,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Date;
 
+
 public class FileController {
 
 	public static void main(String[] args) {
@@ -28,6 +29,13 @@ public class FileController {
 		String path=FileController.class.getResource("/").getPath();
 		path=path.substring(0,path.lastIndexOf("bin"));
 		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
+		System.out.println(path);
 		
 		File f2=new File(path+"testPath");
 		try {
@@ -36,7 +44,6 @@ public class FileController {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
-		
 		//File객체로 폴더도 생성이 가능함.
 		File dir=new File("root/a"+File.separator+"football");//defualt폴더에 폴더생성
 		//폴더를 생성 mkdir(), mkdirs()

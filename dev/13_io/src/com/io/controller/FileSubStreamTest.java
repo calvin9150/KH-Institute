@@ -10,6 +10,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
@@ -182,6 +184,39 @@ public class FileSubStreamTest {
 			e.printStackTrace();
 		}
 	}
+	
+	//이 모든걸 한방에 끝내기
+	public void objectOutputStreamTest() {
+		//생성된 객체를 한번에 저장하기
+		Person[] persons = new Person[3];
+		persons[0] = new Person("asd1", 11, 'M', 110);
+		persons[1] = new Person("asd2", 11, 'M', 110);
+		persons[2] = new Person("asd3", 11, 'M', 110);
+		try(ObjectOutputStream oos
+				= new ObjectOutputStream(new FileOutputStream("obj.aaa"))){
+			for(int i=0; i<persons.length;i++) {
+				oos.writeObject(persons);
+			}
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void objectInputStreamTest() {
+		Person p = null;
+		try(ObjectInputStream ois
+				= new ObjectInputStream(new FileInputStream("obj.aaa"))){
+			
+			p = (Person)ois.readObject();
+			
+			System.out.println(p);
+		} catch (ClassNotFoundException e){
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
 
 

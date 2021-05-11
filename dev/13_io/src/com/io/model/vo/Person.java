@@ -1,6 +1,11 @@
 package com.io.model.vo;
 
-public class Person {
+import java.io.Serializable;
+//Á÷·ÄÈ­
+public class Person implements Serializable{
+	
+
+	private static final long serialVersionUID = -1446892394112895351L;
 	private String name;
 	private int age;
 	private char gender;

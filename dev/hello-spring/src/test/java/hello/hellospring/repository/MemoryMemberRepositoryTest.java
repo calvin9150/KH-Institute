@@ -6,11 +6,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Optional;
 
 public class MemoryMemberRepositoryTest {
 
-    memoryMemberRepository repository = new memoryMemberRepository();
+    MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach // 메서드가 실행이 끝날때마다 이걸 실행.. 콜백메서드 라고 보면 된다.
     public void afterEach() {

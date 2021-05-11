@@ -11,7 +11,7 @@ public class Main {
 //		fio.loadText2();
 //		fio.dataSave();
 //		fio.dataLoad();
-		fss.stringChangeInput();
+		fss.objectOutputStreamTest();
 	}
 
 }

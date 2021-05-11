@@ -30,7 +30,7 @@ public class MapController {
 		System.out.println(map.get("가"));
 		System.out.println(map.get("나"));
 		
-		//key값은 중복이 불가능함.
+		//key는 중복이 불가능함.
 		map.put("가", "유병승");
 		System.out.println(map.get("가"));
 		
@@ -45,7 +45,7 @@ public class MapController {
 		//1. key값을 통째로 가져와 key로 접근하는방법
 		//keySet() -> map의 key Set방식으로 반환하는 메소드
 		Set keys=map.keySet();//key들을 반환함.
-		
+		System.out.println("얄롤리");
 		Iterator it=keys.iterator();
 		while(it.hasNext()) {
 			String key=(String)it.next();//key값
@@ -97,6 +97,7 @@ public class MapController {
 		Iterator carit=carKey.iterator();
 		while(carit.hasNext()) {
 			Car c=(Car)cars.get(carit.next());
+			System.out.println(c);
 			System.out.println(c.getName()+" "+c.getColor()+" "+c.getPrice());
 			//System.out.println(cars.get(carit.next()));
 		}

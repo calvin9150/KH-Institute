@@ -1,14 +1,13 @@
 package com.conditioncontroller.run;
 
 
-import com.repeat.controller.RepeatController;
-
+import com.conditioncontroller.ConditionController;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		new RepeatController().basicFor5();
+		new ConditionController().ifTest2();
 	}
 
 }

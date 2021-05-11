@@ -85,6 +85,8 @@ public class ListController {
 		// 인덱스를 이용해서 삭제 / 동일객체를 이용해서 삭제
 //		foods.remove(1);
 //		foods.remove(1);
+		System.out.println("adssadasdasdads");
+		System.out.println(foods);
 		foods.remove(new Food("계란초밥",1000,"초밥",200,null));//??????? 어..어...엇..어
 		System.out.println(foods);
 		
@@ -273,8 +275,6 @@ public class ListController {
 		return result;
 	}
 }
-
-
 
 
 

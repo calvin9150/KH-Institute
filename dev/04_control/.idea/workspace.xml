@@ -2,18 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2e3514f-461f-44f3-ab30-a1419e1c078f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_control.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/control/controller/ConditionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/control/run/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/conditioncontroller/ConditionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/conditioncontroller/ConditionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/conditioncontroller/run/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/conditioncontroller/run/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/repeat/controller/RepeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/repeat/controller/RepeatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/conditioncontroller/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/conditioncontroller/run/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/repeat/controller/RepeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/repeat/controller/RepeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13_io/src/com/io/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../13_io/src/com/io/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13_io/src/com/io/controller/FileSubStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../13_io/src/com/io/controller/FileSubStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13_io/src/com/io/model/vo/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../13_io/src/com/io/model/vo/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13_io/src/com/io/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../13_io/src/com/io/run/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_collection/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_collection/src/com/common/FoodCalDesc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_collection/src/com/common/FoodCalDesc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_collection/src/com/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_collection/src/com/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_collection/src/com/controller/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_collection/src/com/controller/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_collection/src/com/controller/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_collection/src/com/controller/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coronaVaccine/person.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../coronaVaccine/person.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/dao/PersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coronaVaccine/src/com/vaccine/view/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../student/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../student/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../student/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/com/student/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/com/student/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/com/student/model/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/com/student/model/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/com/student/model/vo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/com/student/model/vo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/com/student/run/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/com/student/run/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student/src/com/student/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../student/src/com/student/view/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/controller/RectangleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/controller/RectangleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/model/vo/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/run/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/run/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/view/PointMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_inherit/src/com/kh/practice/point/view/PointMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_loop/src/com/kh/practice/chap02/loop/LoopPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_loop/src/com/kh/practice/chap02/loop/LoopPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_loop/src/com/kh/practice/chap02/run/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test_loop/src/com/kh/practice/chap02/run/Run.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../03_operator" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dev" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,5 +85,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

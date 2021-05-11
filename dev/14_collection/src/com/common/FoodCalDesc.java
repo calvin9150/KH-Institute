@@ -9,7 +9,7 @@ public class FoodCalDesc implements Comparator<Food>{
 	@Override 
 	public int compare(Food f1, Food f2) {
 		
-		return f2.getCalory()-f1.getCalory();
+		return f2.getCalorie()-f1.getCalorie();
 		
 	}
 	
